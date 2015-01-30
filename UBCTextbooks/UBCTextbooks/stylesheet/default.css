@@ -1,0 +1,230 @@
+﻿body
+{
+	margin:10px 0px;
+	padding:0px;
+	text-align:center;
+}
+input.textbox
+{
+	border:solid 1px #BBBBBB;
+	width:250px;
+}
+input.button, a.button
+{
+	color:gray;
+	font-size:18px;
+	border:none;
+	padding-left:18px;
+	padding-right:5px;
+	background:url("../images/button.gif") 0 0 no-repeat;
+	margin:30px 0px 20px 0px;
+	overflow:visible;
+}
+a.button
+{
+	text-decoration:none;
+	color:White;
+}
+div#main
+{
+	width:900px;
+	margin:0px auto;
+	text-align:left;
+}
+div#ctl00_navigation
+{
+	float:right;
+	text-align:right;
+	color:gray;
+}
+div#ctl00_navigation a
+{
+	cursor:pointer;
+	color:gray;
+	text-decoration:none;
+}
+div#ctl00_navigation a:hover
+{
+	color:Black;
+}
+div#logininfo
+{
+	font-size:0.8em;
+	margin-bottom:15px;
+}
+.hidden
+{
+    visibility:hidden;
+}
+.visible
+{
+    visibility:visible;
+}
+div#ctl00_navigation .activated
+{
+	text-decoration:underline;
+	color:black;
+	cursor:default;
+}
+div#header
+{
+	margin-bottom:2px;
+}
+td.label
+{
+	text-align:right;
+}
+.row, .rowa
+{
+	width:600px;
+	font-size:14px;
+	margin:5px;
+}
+.row
+{
+    background-color:#EEEEEE;
+}
+.pager
+{
+	text-align:center;
+	width:600px;
+	font-size:14px;
+}
+.pager a
+{
+	margin:2px;
+	color:Black;
+}
+.row:hover, .rowa:hover
+{
+	cursor:pointer;
+	background-color:#FFFF55;
+}
+.c_name
+{
+	color: #222;
+	text-decoration: none;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 18px;
+}
+.c_time, .c_mailaddress
+{
+	margin-left:20px;
+	color:Gray;
+	font-size:small;
+}
+.Offer, .Comment
+{
+	padding-left:50px;
+	padding-top:35px;
+	padding-bottom:30px;
+	overflow:auto;
+}
+.Offer
+{
+	background:url("../images/offer.gif") 0 0 no-repeat;
+}
+.Comment
+{
+	background:url("../images/comment.gif") 0 0 no-repeat;
+}
+#div_criteriaheader 
+{
+	margin-top: 30px;
+	background-color: #CCCCCC;
+}
+
+#div_criteria
+{
+	background-color: #EEEEEE;
+}
+
+
+
+table.calendar {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 0.8em;
+	border-collapse: collapse;
+	background-color: white;
+	border: solid #999999 1px;
+	background-color: white;
+	width: 200px;
+	text-align: center;
+	/*prevent user from selecting text in Mozilla & Safari - check calendar constructor for IE code)*/
+	-moz-user-select: none;
+    /*-khtml-user-select: none;*/
+}
+table.calendar input, table.calendar select {
+	font-size: 10px;
+}
+table.calendar td {
+	border: 0;
+	font-size: 10px;
+	text-align: center;
+}
+div.mainheading {
+	margin: 2px;
+}
+table.caldayheading {
+	border-collapse: collapse;
+	cursor: pointer;
+	empty-cells: show;
+	margin: 0 6px 0 6px;
+}
+table.caldayheading td {
+	border: solid #CCCCCC 1px;
+	text-align: left;
+	font-weight: bold;
+	width: 22px; /*should match calendar cell's width*/
+}
+table.caldayheading td.wkhead {
+	border-right: double #CCCCCC 3px;
+}
+table.calcells {
+	border-collapse: collapse;
+	cursor: pointer;
+	margin: 0 6px 0 6px;
+}
+table.calcells td {
+	border: solid #CCCCCC 1px;
+	vertical-align: top;
+	text-align: left;
+	font-weight: bold;
+	width: 22px;
+	height: 20px; /*IE doesn't like ems*/
+}
+table.calcells td div {
+	padding: 1px;
+	margin: 0;
+}
+table.calcells td.wkhead {
+	background-color: white;
+	text-align: center;
+	border-right: double #CCCCCC 3px;
+}
+table.calcells td.wkday {
+	background-color: #DDDDDD;
+}
+table.calcells td.wkend {
+	background-color: #DDDDDD;
+}
+table.calcells td.curdate {
+
+}
+table.calcells td.cell_selected {
+	background-color: #FFCC33;
+	color: black;
+}
+table.calcells td.notmnth {
+	background-color: #FFFFFF;
+	color: #CCCCCC;
+}
+table.calcells td.notallowed {
+	background-color: white;
+	color: #EEEEEE;
+	font-style: italic;
+}
+table.calcells td.hover {
+	background-color: #FFCC33;
+}

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UBCTextbooks", "UBCTextbooks\UBCTextbooks.csproj", "{BFAC9F9B-5C00-42DE-803D-F9944D0F9BE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UBCTextbooksCore", "UBCTextbooksCore\UBCTextbooksCore.csproj", "{17A98452-7AF8-4C90-9FCE-A07D21EDC108}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amazon.PAAPI.WCF", "Amazon.PAAPI.WCF\Amazon.PAAPI.WCF.csproj", "{D38B4A40-D315-4158-9BD1-34C1697668BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFAC9F9B-5C00-42DE-803D-F9944D0F9BE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFAC9F9B-5C00-42DE-803D-F9944D0F9BE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFAC9F9B-5C00-42DE-803D-F9944D0F9BE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFAC9F9B-5C00-42DE-803D-F9944D0F9BE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17A98452-7AF8-4C90-9FCE-A07D21EDC108}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17A98452-7AF8-4C90-9FCE-A07D21EDC108}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17A98452-7AF8-4C90-9FCE-A07D21EDC108}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17A98452-7AF8-4C90-9FCE-A07D21EDC108}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D38B4A40-D315-4158-9BD1-34C1697668BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D38B4A40-D315-4158-9BD1-34C1697668BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D38B4A40-D315-4158-9BD1-34C1697668BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D38B4A40-D315-4158-9BD1-34C1697668BB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

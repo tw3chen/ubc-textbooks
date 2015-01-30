@@ -1,0 +1,33 @@
+C:\UBCTextbooks\UBCTextbooks\UBCTextbooksCore\bin\Debug\UBCTextbooksCore.dll
+C:\UBCTextbooks\UBCTextbooks\UBCTextbooksCore\bin\Debug\UBCTextbooksCore.pdb
+C:\UBCTextbooks\UBCTextbooks\UBCTextbooksCore\obj\Debug\ResolveAssemblyReference.cache
+C:\UBCTextbooks\UBCTextbooks\UBCTextbooksCore\obj\Debug\UBCTextbooksCore.dll
+C:\UBCTextbooks\UBCTextbooks\UBCTextbooksCore\obj\Debug\UBCTextbooksCore.pdb
+C:\Documents and Settings\wchen\Desktop\UBCTextbooks\UBCTextbooks\UBCTextbooksCore\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\wchen\Desktop\UBCTextbooks\UBCTextbooks\UBCTextbooksCore\obj\Debug\UBCTextbooksCore.dll
+C:\Documents and Settings\wchen\Desktop\UBCTextbooks\UBCTextbooks\UBCTextbooksCore\bin\Debug\UBCTextbooksCore.dll
+C:\Documents and Settings\wchen\Desktop\UBCTextbooks\UBCTextbooks\UBCTextbooksCore\bin\Debug\UBCTextbooksCore.pdb
+C:\Documents and Settings\wchen\Desktop\UBCTextbooks\UBCTextbooks\UBCTextbooksCore\obj\Debug\UBCTextbooksCore.pdb
+C:\Users\wchen\Desktop\UBCTextbooks\UBCTextbooks\UBCTextbooksCore\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\wchen\Desktop\UBCTextbooks\UBCTextbooks\UBCTextbooksCore\obj\Debug\UBCTextbooksCore.pdb
+C:\Users\wchen\Desktop\UBCTextbooks\UBCTextbooks\UBCTextbooksCore\bin\Debug\UBCTextbooksCore.dll
+C:\Users\wchen\Desktop\UBCTextbooks\UBCTextbooks\UBCTextbooksCore\bin\Debug\UBCTextbooksCore.pdb
+C:\Users\wchen\Desktop\UBCTextbooks\UBCTextbooks\UBCTextbooksCore\obj\Debug\UBCTextbooksCore.dll
+C:\Users\User\Desktop\UBCTextbooks\UBCTextbooks\UBCTextbooks\UBCTextbooksCore\bin\Debug\UBCTextbooksCore.dll
+C:\Users\User\Desktop\UBCTextbooks\UBCTextbooks\UBCTextbooks\UBCTextbooksCore\bin\Debug\UBCTextbooksCore.pdb
+C:\Users\User\Desktop\UBCTextbooks\UBCTextbooks\UBCTextbooks\UBCTextbooksCore\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\User\Desktop\UBCTextbooks\UBCTextbooks\UBCTextbooks\UBCTextbooksCore\obj\Debug\UBCTextbooksCore.dll
+C:\Users\User\Desktop\UBCTextbooks\UBCTextbooks\UBCTextbooks\UBCTextbooksCore\obj\Debug\UBCTextbooksCore.pdb
+C:\Users\User\Desktop\UBCTextbooks\UBCTextbooks\UBCTextbooksCore\bin\Debug\UBCTextbooksCore.dll
+C:\Users\User\Desktop\UBCTextbooks\UBCTextbooks\UBCTextbooksCore\bin\Debug\UBCTextbooksCore.pdb
+C:\Users\User\Desktop\UBCTextbooks\UBCTextbooks\UBCTextbooksCore\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\User\Desktop\UBCTextbooks\UBCTextbooks\UBCTextbooksCore\obj\Debug\UBCTextbooksCore.dll
+C:\Users\User\Desktop\UBCTextbooks\UBCTextbooks\UBCTextbooksCore\obj\Debug\UBCTextbooksCore.pdb
+C:\Users\tw3chen\Documents\Projects\UBCTextbooks_R\UBCTextbooks\UBCTextbooksCore\bin\Debug\UBCTextbooksCore.dll
+C:\Users\tw3chen\Documents\Projects\UBCTextbooks_R\UBCTextbooks\UBCTextbooksCore\bin\Debug\UBCTextbooksCore.dll.config
+C:\Users\tw3chen\Documents\Projects\UBCTextbooks_R\UBCTextbooks\UBCTextbooksCore\bin\Debug\Amazon.PAAPI.WCF.dll
+C:\Users\tw3chen\Documents\Projects\UBCTextbooks_R\UBCTextbooks\UBCTextbooksCore\bin\Debug\Amazon.PAAPI.WCF.pdb
+C:\Users\tw3chen\Documents\Projects\UBCTextbooks_R\UBCTextbooks\UBCTextbooksCore\obj\Debug\UBCTextbooksCore.csprojResolveAssemblyReference.cache
+C:\Users\tw3chen\Documents\Projects\UBCTextbooks_R\UBCTextbooks\UBCTextbooksCore\obj\Debug\UBCTextbooksCore.dll
+C:\Users\tw3chen\Documents\Projects\UBCTextbooks_R\UBCTextbooks\UBCTextbooksCore\obj\Debug\UBCTextbooksCore.pdb
+C:\Users\tw3chen\Documents\Projects\UBCTextbooks_R\UBCTextbooks\UBCTextbooksCore\bin\Debug\UBCTextbooksCore.pdb

@@ -1,0 +1,62 @@
+﻿<%@ Page Language="C#" MasterPageFile="~/SiteTemplate.Master" AutoEventWireup="true" CodeBehind="MyListing.aspx.cs" Inherits="UBCTextbooks.MyListing" %>
+<%@ MasterType VirtualPath="~/SiteTemplate.Master" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="System.Globalization" %>
+<asp:Content id="selldetails" ContentPlaceHolderID="Content" runat="server">
+    <div>
+        <h1><asp:Literal id="lt_mylisting" Text="" runat="server" /></h1>
+        <p><asp:Literal id="lt_mylisting_description" Text="" runat="server" /></p>
+        <div style="float:left;">
+            <asp:Repeater id="rp_mylisting" runat="server">
+            <ItemTemplate>
+                <div id="<%#DataBinder.Eval(Container.DataItem, "ListId")%>" class="row" onclick="alert(this.id)">
+                    <div><b><%#DataBinder.Eval(Container.DataItem, "BookName")%></b></div>
+                    <div style="text-align:right;"><asp:HyperLink onclick="event.cancelBubble = true;" id="btn_commentoroffer" CssClass="button" Text="<%$ Resources: String, btn_commentoroffer %>" runat="server" NavigateUrl='<%#"~/listdetails?id=" + DataBinder.Eval(Container.DataItem, "ListId")%>' /></div>
+                    <div><%#GetGlobalResourceObject("String", "lt_authors").ToString() + ": " + DataBinder.Eval(Container.DataItem, "AuthorNames")%></div>
+                    <%#GetGlobalResourceObject("String", "lt_isbn").ToString() + ": " + DataBinder.Eval(Container.DataItem, "ISBN") + " / " + DataBinder.Eval(Container.DataItem, "EAN")%><br />
+                    <div><%#GetGlobalResourceObject("String", "lt_coursecode").ToString() + ": " + DataBinder.Eval(Container.DataItem, "CourseCode")%></div>
+                    <span style="width:150px;display:inline-block;"><%#GetGlobalResourceObject("String", "lt_edition").ToString() + ": " + DataBinder.Eval(Container.DataItem, "Edition")%></span>
+                    <span style="width:150px;display:inline-block;"><%#GetGlobalResourceObject("String", "lt_condition").ToString() + ": " + GetGlobalResourceObject("String", "ddl_cd" + DataBinder.Eval(Container.DataItem, "Condition"))%></span>
+                    <span><%#GetGlobalResourceObject("String", "lt_numberofoffers").ToString() + ": " + DataBinder.Eval(Container.DataItem, "NumberOfOffers")%></span><br />
+                    <span style="width:150px;display:inline-block;"><%#GetGlobalResourceObject("String", "lt_price").ToString() + ": <i>$" + String.Format("{0:F2}", float.Parse((string)DataBinder.Eval(Container.DataItem, "Price"))) + "</i>"%></span>
+                    <span style="width:150px;display:inline-block;"><%#GetGlobalResourceObject("String", "lt_area").ToString() + ": " + DataBinder.Eval(Container.DataItem, "Area")%></span>
+                    <span><%#GetGlobalResourceObject("String", "lt_timeposted").ToString() + ": " + DataBinder.Eval(Container.DataItem, "TimePosted")%><br /></span>
+                </div>
+            </ItemTemplate>
+            <AlternatingItemTemplate>
+                <div id="<%#DataBinder.Eval(Container.DataItem, "ListId")%>" class="rowa" onclick="alert(this.id)">
+                    <div><b><%#DataBinder.Eval(Container.DataItem, "BookName")%></b></div>
+                    <div style="text-align:right;"><asp:HyperLink onclick="event.cancelBubble = true;" id="btn_commentoroffer" CssClass="button" Text="<%$ Resources: String, btn_commentoroffer %>" runat="server" NavigateUrl='<%#"~/listdetails?id=" + DataBinder.Eval(Container.DataItem, "ListId")%>' /></div>
+                    <div><%#GetGlobalResourceObject("String", "lt_authors").ToString() + ": " + DataBinder.Eval(Container.DataItem, "AuthorNames")%></div>
+                    <%#GetGlobalResourceObject("String", "lt_isbn").ToString() + ": " + DataBinder.Eval(Container.DataItem, "ISBN") + " / " + DataBinder.Eval(Container.DataItem, "EAN")%><br />
+                    <div><%#GetGlobalResourceObject("String", "lt_coursecode").ToString() + ": " + DataBinder.Eval(Container.DataItem, "CourseCode")%></div>
+                    <span style="width:150px;display:inline-block;"><%#GetGlobalResourceObject("String", "lt_edition").ToString() + ": " + DataBinder.Eval(Container.DataItem, "Edition")%></span>
+                    <span style="width:150px;display:inline-block;"><%#GetGlobalResourceObject("String", "lt_condition").ToString() + ": " + GetGlobalResourceObject("String", "ddl_cd" + DataBinder.Eval(Container.DataItem, "Condition"))%></span>
+                    <span><%#GetGlobalResourceObject("String", "lt_numberofoffers").ToString() + ": " + DataBinder.Eval(Container.DataItem, "NumberOfOffers")%></span><br />
+                    <span style="width:150px;display:inline-block;"><%#GetGlobalResourceObject("String", "lt_price").ToString() + ": <i>$" + String.Format("{0:F2}", float.Parse((string)DataBinder.Eval(Container.DataItem, "Price"))) + "</i>"%></span>
+                    <span style="width:150px;display:inline-block;"><%#GetGlobalResourceObject("String", "lt_area").ToString() + ": " + DataBinder.Eval(Container.DataItem, "Area")%></span>
+                    <span><%#GetGlobalResourceObject("String", "lt_timeposted").ToString() + ": " + DataBinder.Eval(Container.DataItem, "TimePosted")%><br /></span>
+                </div>
+            </AlternatingItemTemplate>
+            </asp:Repeater>
+                <div class="pager" id="div_pager">
+                    <asp:PlaceHolder ID="ph_pager" runat="server"></asp:PlaceHolder>
+                </div>
+            </div>
+            <div>
+                <div id="googleBookCanvas" style="width:300px;height:400px;"></div>
+                <div></div>
+            </div>
+    </div>
+    <script type="text/javascript" src="http://www.google.com/jsapi?ABQIAAAAvqYYNYZ408xLN59l5OFVyBT2yXp_ZAY8_ufC3CFXhHIE1NvwkxRSPjMYw_9tUfVVJaBweZn0qrBP4A"></script>
+    <script type="text/javascript">
+        google.load("books", "0");
+        initialize();
+        function initialize() {
+            var viewer = new google.books.DefaultViewer(document.getElementById('googleBookCanvas'));
+            viewer.load('ISBN:0738531367');
+        }
+
+        google.setOnLoadCallback(initialize);
+    </script>
+</asp:Content>

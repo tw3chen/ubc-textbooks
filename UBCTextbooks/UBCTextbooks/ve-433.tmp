@@ -1,0 +1,197 @@
+﻿<%@ Page Language="C#" MasterPageFile="~/SiteTemplate.Master" AutoEventWireup="true" CodeBehind="MyListing.aspx.cs" Inherits="UBCTextbooks.MyListing" %>
+<%@ MasterType VirtualPath="~/SiteTemplate.Master" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="System.Globalization" %>
+<asp:Content id="selldetails" ContentPlaceHolderID="Content" runat="server">
+    <div>
+        <h1><asp:Literal id="lt_mylisting" Text="" runat="server" /></h1>
+        <p><asp:Literal id="lt_mylisting_description" Text="" runat="server" /></p>
+        <div style="float:left;">
+            <asp:Repeater id="rp_mylisting" runat="server">
+            <ItemTemplate>
+                <div id="<%#DataBinder.Eval(Container.DataItem, "ListId")%>" class="row" onclick="performSearch(this.id, this.style.backgroundColor);">
+                    <div><b><%#DataBinder.Eval(Container.DataItem, "BookName")%></b></div>
+                    <div style="text-align:right;"><asp:HyperLink onclick="event.cancelBubble = true;" id="btn_commentoroffer" CssClass="button" Text="<%$ Resources: String, btn_commentoroffer %>" runat="server" NavigateUrl='<%#"~/listdetails?id=" + DataBinder.Eval(Container.DataItem, "ListId")%>' /></div>
+                    <div><%#GetGlobalResourceObject("String", "lt_authors").ToString() + ": " + DataBinder.Eval(Container.DataItem, "AuthorNames")%></div>
+                    <%#GetGlobalResourceObject("String", "lt_isbn").ToString() + ": " + DataBinder.Eval(Container.DataItem, "ISBN") + " / " + DataBinder.Eval(Container.DataItem, "EAN")%><br />
+                    <span style="width:150px;display:inline-block;"><%#GetGlobalResourceObject("String", "lt_edition").ToString() + ": " + DataBinder.Eval(Container.DataItem, "Edition")%></span>
+                    <span style="width:150px;display:inline-block;"><%#GetGlobalResourceObject("String", "lt_condition").ToString() + ": " + GetGlobalResourceObject("String", "ddl_cd" + DataBinder.Eval(Container.DataItem, "Condition"))%></span>
+                    <span><%#GetGlobalResourceObject("String", "lt_numberofoffers").ToString() + ": " + DataBinder.Eval(Container.DataItem, "NumberOfOffers")%></span><br />
+                    <span style="width:150px;display:inline-block;"><%#GetGlobalResourceObject("String", "lt_price").ToString() + ": <i>$" + String.Format("{0:F2}", float.Parse((string)DataBinder.Eval(Container.DataItem, "Price"))) + "</i>"%></span>
+                    <span style="width:150px;display:inline-block;"><%#GetGlobalResourceObject("String", "lt_area").ToString() + ": " + DataBinder.Eval(Container.DataItem, "Area")%></span>
+                    <span><%#GetGlobalResourceObject("String", "lt_timeposted").ToString() + ": " + DataBinder.Eval(Container.DataItem, "TimePosted")%><br /></span>
+                </div>
+            </ItemTemplate>
+            <AlternatingItemTemplate>
+                <div id="<%#DataBinder.Eval(Container.DataItem, "ListId")%>" class="rowa" onclick="performSearch(this.id, this.style.backgroundColor);">
+                    <div><b><%#DataBinder.Eval(Container.DataItem, "BookName")%></b></div>
+                    <div style="text-align:right;"><asp:HyperLink onclick="event.cancelBubble = true;" id="btn_commentoroffer" CssClass="button" Text="<%$ Resources: String, btn_commentoroffer %>" runat="server" NavigateUrl='<%#"~/listdetails?id=" + DataBinder.Eval(Container.DataItem, "ListId")%>' /></div>
+                    <div><%#GetGlobalResourceObject("String", "lt_authors").ToString() + ": " + DataBinder.Eval(Container.DataItem, "AuthorNames")%></div>
+                    <%#GetGlobalResourceObject("String", "lt_isbn").ToString() + ": " + DataBinder.Eval(Container.DataItem, "ISBN") + " / " + DataBinder.Eval(Container.DataItem, "EAN")%><br />
+                    <span style="width:150px;display:inline-block;"><%#GetGlobalResourceObject("String", "lt_edition").ToString() + ": " + DataBinder.Eval(Container.DataItem, "Edition")%></span>
+                    <span style="width:150px;display:inline-block;"><%#GetGlobalResourceObject("String", "lt_condition").ToString() + ": " + GetGlobalResourceObject("String", "ddl_cd" + DataBinder.Eval(Container.DataItem, "Condition"))%></span>
+                    <span><%#GetGlobalResourceObject("String", "lt_numberofoffers").ToString() + ": " + DataBinder.Eval(Container.DataItem, "NumberOfOffers")%></span><br />
+                    <span style="width:150px;display:inline-block;"><%#GetGlobalResourceObject("String", "lt_price").ToString() + ": <i>$" + String.Format("{0:F2}", float.Parse((string)DataBinder.Eval(Container.DataItem, "Price"))) + "</i>"%></span>
+                    <span style="width:150px;display:inline-block;"><%#GetGlobalResourceObject("String", "lt_area").ToString() + ": " + DataBinder.Eval(Container.DataItem, "Area")%></span>
+                    <span><%#GetGlobalResourceObject("String", "lt_timeposted").ToString() + ": " + DataBinder.Eval(Container.DataItem, "TimePosted")%><br /></span>
+                </div>
+            </AlternatingItemTemplate>
+            </asp:Repeater>
+                <div class="pager" id="div_pager">
+                    <asp:PlaceHolder ID="ph_pager" runat="server"></asp:PlaceHolder>
+                </div>
+        </div>
+        <div id="div_side" style="margin:10px;text-align:left;">
+        </div>
+        <div id='0'>
+        </div>
+    </div>
+    <!--<script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAvqYYNYZ408xLN59l5OFVyBT2yXp_ZAY8_ufC3CFXhHIE1NvwkxRSPjMYw_9tUfVVJaBweZn0qrBP4A"></script>
+    <script type="text/javascript">
+        google.load("books", "0");
+        function initialize() {
+            var viewer = new google.books.DefaultViewer(document.getElementById('googleBookCanvas'));
+            viewer.load('ISBN:1590598938');
+        }
+
+        google.setOnLoadCallback(initialize);
+    </script>-->
+    <script type="text/javascript">
+        var searchResult;
+        var prevlistid = 0;
+        var prevbackgroundcolor = 'red';
+        var image = new Image();
+        var sideDiv = document.getElementById("div_side");
+        
+        var xHRObject = false;
+        if (window.XMLHttpRequest) {
+            xHRObject = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xHRObject = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        function performSearch(listid, bgcolor) {
+            document.getElementById(prevlistid).style.backgroundColor = prevbackgroundcolor;
+            document.getElementById(listid).style.backgroundColor = '#FFFF55';
+            performQuery(listid);
+            prevlistid = listid;
+            prevbackgroundcolor = bgcolor;
+        }
+        function performQuery(listid) {
+            xHRObject.open("GET", "ExtraSearch.aspx?listid=" + listid + "&id=" + Number(new Date), true);
+            xHRObject.onreadystatechange = getSearchResult;
+            xHRObject.send(null);
+        }
+        function getSearchResult() {
+            if ((xHRObject.readyState == 4) && (xHRObject.status == 200)) {
+                var serverSearchResult = xHRObject.responseText;
+                searchResult = eval(serverSearchResult);
+                //this should be used for safety according to documentation, but what is reviver
+                //searchResult = JSON.parse(serverSearchResult, reviver);
+                //extraDiv.innerHTML = "";
+                displayResult();
+            }
+            if (xHRObject.readyState == 1 || xHRObject.readyState == 2) {
+                //extraDiv.innerHTML = "Loading";
+            }
+        }
+
+        function appendText(node, txt) {
+            node.appendChild(document.createTextNode(txt));
+        }
+
+        var refpDiv = document.createElement('div');
+        var courseDiv = document.createElement('div');
+        var bindingDiv = document.createElement('div');
+        function displayResult() {
+            if (searchResult[0].ImageUrl != 'N/A')
+                image.src = searchResult[0].ImageUrl;
+            else
+                image.src = "images/imageua.gif";
+            var price = searchResult[0].Price.substring(0, searchResult[0].Price.length - 2);
+            if (searchResult[0].Price != '0.0000')
+                refpDiv.innerHTML = 'Reference Amazon Price: $' + price;
+            courseDiv.innerHTML = 'Associated Course Codes: ' + searchResult[0].CourseList;
+            sideDiv.appendChild(image);
+            sideDiv.appendChild(refpDiv);
+            sideDiv.appendChild(courseDiv);
+            //appendText(sideDiv, 'Associated Course Codes' + searchResult[0].CourseList);
+            //alert(searchResult[0].ImageUrl);
+            /*
+            var tableDiv = document.getElementById("tableDiv");
+            var resultTable = document.createElement("table");
+            var tableHead = document.createElement("thead");
+            var tableHeadRow = document.createElement("tr");
+            var tableBody = document.createElement("tbody");
+            var bookNameHeading = document.createElement("th");
+            var editionHeading = document.createElement("th");
+            var priceHeading = document.createElement("th");
+            var conditionHeading = document.createElement("th");
+            var timePostedHeading = document.createElement("th");
+
+            resultTable.id = "resultTable";
+            resultTable.setAttribute("id", "resultTable");
+            resultTable.cellPadding = "0";
+
+            bookNameHeading.innerHTML = "Book Name";
+            editionHeading.innerHTML = "Edition #";
+            priceHeading.innerHTML = "Price";
+            conditionHeading.innerHTML = "Condition";
+            timePostedHeading.innerHTML = "Time Posted";
+
+            tableHeadRow.appendChild(bookNameHeading);
+            tableHeadRow.appendChild(editionHeading);
+            tableHeadRow.appendChild(priceHeading);
+            tableHeadRow.appendChild(conditionHeading);
+            tableHeadRow.appendChild(timePostedHeading);
+            tableHead.appendChild(tableHeadRow);
+
+            for (var i = 0; i < searchResult.length; i++) {
+                var tableRow = document.createElement("tr");
+                var bookNameData = document.createElement("td");
+                var editionData = document.createElement("td");
+                var priceData = document.createElement("td");
+                var conditionData = document.createElement("td");
+                var timePostedData = document.createElement("td");
+
+                bookNameData.innerHTML = searchResult[i].BookID;
+                editionData.innerHTML = searchResult[i].Edition;
+                priceData.innerHTML = searchResult[i].Price;
+                conditionData.innerHTML = searchResult[i].Condition;
+                timePostedData.innerHTML = searchResult[i].TimePosted;
+
+                tableRow.appendChild(bookNameData);
+                tableRow.appendChild(editionData);
+                tableRow.appendChild(priceData);
+                tableRow.appendChild(conditionData);
+                tableRow.appendChild(timePostedData);
+
+                if (i % 2 == 0)
+                    tableRow.className = "altRow";
+                else
+                    tableRow.className = "row";
+
+                tableBody.appendChild(tableRow);
+            }
+            resultTable.appendChild(tableHead);
+            resultTable.appendChild(tableBody);
+
+            tableDiv.appendChild(resultTable);*/
+        }
+        
+        
+        document.onkeyup = KeyCheck;
+        function KeyCheck(e) {
+            var KeyID = (window.event) ? event.keyCode : e.keyCode;
+            switch (KeyID) {
+                case 37:
+                    document.getElementById('ctl00_Content_prevLnk').click();
+                    break;
+                case 39:
+                    document.getElementById('ctl00_Content_nextLnk').click();
+                    break;
+            }
+        }
+    </script>
+</asp:Content>

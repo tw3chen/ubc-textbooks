@@ -1,0 +1,59 @@
+﻿<%@ Page Language="C#" MasterPageFile="~/SiteTemplate.Master" AutoEventWireup="true" CodeBehind="MyListing.aspx.cs" Inherits="UBCTextbooks.MyListing" %>
+<%@ MasterType VirtualPath="~/SiteTemplate.Master" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="System.Globalization" %>
+<asp:Content id="selldetails" ContentPlaceHolderID="Content" runat="server">
+    <div id="div_selldetails">
+        <h1><asp:Literal id="lt_mylisting" Text="" runat="server" /></h1>
+        <p><asp:Literal id="lt_mylisting_description" Text="" runat="server" /></p>
+        <asp:Repeater id="rp_mylisting" runat="server">
+            <HeaderTemplate>
+                <table cellpadding="0" cellspacing="0" style="border-style:none;">
+                    <tr style="background-color:#EEEEEE;">
+                        <th><asp:Literal ID="lt_title" runat="server" Text="<%$ Resources: String, lt_title %>" /></th>
+                        <th><asp:Literal ID="lt_authors" runat="server" Text="<%$ Resources: String, lt_authors %>" /></th>
+                        <th><asp:Literal ID="lt_price" runat="server" Text="<%$ Resources: String, lt_price %>" /></th>
+                        <th><asp:Literal ID="lt_condition" runat="server" Text="<%$ Resources: String, lt_condition %>" /></th>
+                        <th><asp:Label ID="lt_numberofoffers" runat="server" Text="<%$ Resources: String, lt_numberofoffers %>" /></th>
+                    </tr>
+            </HeaderTemplate>
+            <ItemTemplate>
+                <tr>
+                    <tr>
+                        <td><%#DataBinder.Eval(Container.DataItem, "BookName")%></td>
+                        <td><%#DataBinder.Eval(Container.DataItem, "AuthorNames")%></td>
+                        <td><%#String.Format("{0:F2}", DataBinder.Eval(Container.DataItem, "Price"))%></td>
+                        <td><%#GetGlobalResourceObject("String", "ddl_cd" + DataBinder.Eval(Container.DataItem, "Condition"))%></td>
+                        <td><%#DataBinder.Eval(Container.DataItem, "NumberOfOffers")%></td>
+                    </tr>
+                    <tr>
+                        <td><%#"ISBN: " + DataBinder.Eval(Container.DataItem, "ISBN") + " / " + DataBinder.Eval(Container.DataItem, "EAN")%></td>
+                        <td><%#"Edition: " + DataBinder.Eval(Container.DataItem, "Edition")%></td>
+                        <td><%#"Area: " + DataBinder.Eval(Container.DataItem, "Area")%></td>
+                        <td colspan="2"><%#"Time Posted: " + DataBinder.Eval(Container.DataItem, "TimePosted")%></td>
+                    </tr>
+                </tr>
+            </ItemTemplate>
+            <AlternatingItemTemplate>
+                <tr>
+                    <tr style="background-color:#EEEEEE;">
+                        <td><%#DataBinder.Eval(Container.DataItem, "BookName")%> </td>
+                        <td><%#DataBinder.Eval(Container.DataItem, "AuthorNames")%> </td>
+                        <td><%#String.Format("{0:F2}", DataBinder.Eval(Container.DataItem, "Price"))%> </td>
+                        <td><%#GetGlobalResourceObject("String", "ddl_cd" + DataBinder.Eval(Container.DataItem, "Condition"))%> </td>
+                        <td><%#DataBinder.Eval(Container.DataItem, "NumberOfOffers")%> </td>
+                    </tr>
+                    <tr style="background-color:#EEEEEE;">
+                        <td><%#"ISBN: " + DataBinder.Eval(Container.DataItem, "ISBN") + " / " + DataBinder.Eval(Container.DataItem, "EAN")%></td>
+                        <td><%#"Edition: " + DataBinder.Eval(Container.DataItem, "Edition")%> </td>
+                        <td><%#"Area: " + DataBinder.Eval(Container.DataItem, "Area")%> </td>
+                        <td colspan="2"><%#"Time Posted: " + DataBinder.Eval(Container.DataItem, "TimePosted")%> </td>
+                    </tr>
+                </tr>
+            </AlternatingItemTemplate>
+            <FooterTemplate>
+                </table>
+            </FooterTemplate>
+        </asp:Repeater>
+    </div>
+</asp:Content>

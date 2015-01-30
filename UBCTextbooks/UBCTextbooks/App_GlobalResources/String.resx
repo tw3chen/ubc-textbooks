@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="hp_buytextbooks" xml:space="preserve">
+    <value>Buy Textbooks</value>
+  </data>
+  <data name="hp_home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="hp_login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="hp_selltextbooks" xml:space="preserve">
+    <value>Sell Textbooks</value>
+  </data>
+  <data name="hp_signup" xml:space="preserve">
+    <value>Sign Up</value>
+  </data>
+  <data name="lt_captchaverification" xml:space="preserve">
+    <value>Captcha Verification</value>
+  </data>
+  <data name="lt_captcha_description" xml:space="preserve">
+    <value>Type the characters you see in the picture below.</value>
+  </data>
+  <data name="lt_displayname" xml:space="preserve">
+    <value>Display Name</value>
+  </data>
+  <data name="lt_displayname_description" xml:space="preserve">
+    <value>Your display name will be the only information shown to other visitors.</value>
+  </data>
+  <data name="lt_emailaddress" xml:space="preserve">
+    <value>Email Address</value>
+  </data>
+  <data name="lt_emailaddress_confirm" xml:space="preserve">
+    <value>Confirm Email Address</value>
+  </data>
+  <data name="lt_emailaddress_description" xml:space="preserve">
+    <value>Your email address will serve as an &lt;i&gt;unique&lt;/i&gt; username.</value>
+  </data>
+  <data name="lt_password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="lt_password_confirm" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
+  <data name="lt_signup" xml:space="preserve">
+    <value>Sign Up</value>
+  </data>
+  <data name="lt_signup_description" xml:space="preserve">
+    <value>Your UBCTextbooks Account gives you access to selling textbooks. If you already have a UBCTextbooks Account, you can &lt;a href="login"&gt;login here&lt;/a&gt;.</value>
+  </data>
+  <data name="btn_signup" xml:space="preserve">
+    <value>Sign Up</value>
+  </data>
+  <data name="pagetitle" xml:space="preserve">
+    <value>UBCTextbooks</value>
+  </data>
+  <data name="msg_captchanotmatch" xml:space="preserve">
+    <value>*The characters you entered didn't match the captcha verification.</value>
+  </data>
+  <data name="msg_displaynotvalid" xml:space="preserve">
+    <value>*Your display name must only contain alphabets, numbers or underscores and requires 3 ~ 12 characters.</value>
+  </data>
+  <data name="msg_emailnotvalid" xml:space="preserve">
+    <value>*Your email address is invalid.</value>
+  </data>
+  <data name="msg_inputnotmatch" xml:space="preserve">
+    <value>*Your input does not match.</value>
+  </data>
+  <data name="msg_passwordnotvalid" xml:space="preserve">
+    <value>*Your password must only contain alphabets, numbers or underscores and requires 6 ~ 15 characters.</value>
+  </data>
+  <data name="msg_requiredfield" xml:space="preserve">
+    <value>*This is a required field.</value>
+  </data>
+  <data name="mail_verificationbody" xml:space="preserve">
+    <value>Thank you for signing up at UBCTextbooks.ca. Please click on the link below to activate your account.&lt;br /&gt;If you cannot click on the link, please copy and paste it into your browser's address area and hit Enter.</value>
+  </data>
+  <data name="mail_verificationsubject" xml:space="preserve">
+    <value>Account Verification</value>
+  </data>
+  <data name="msg_repeatedemailorname" xml:space="preserve">
+    <value>*An account with this email address or display name has already been created.</value>
+  </data>
+  <data name="hp_mylisting" xml:space="preserve">
+    <value>My Listing</value>
+  </data>
+  <data name="btn_login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="lt_login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="lt_login_description" xml:space="preserve">
+    <value>You need to login in order to list your textbooks.&lt;br /&gt;Don't have an account? Please &lt;a href="signup"&gt;sign up&lt;/a&gt; first.</value>
+  </data>
+  <data name="lt_rememberme" xml:space="preserve">
+    <value>Remember Me</value>
+  </data>
+  <data name="hp_logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="hp_myaccount" xml:space="preserve">
+    <value>My Account</value>
+  </data>
+  <data name="lt_loginfailed" xml:space="preserve">
+    <value>Your login has failed.&lt;br /&gt;Please make sure that your email address and password are correct before trying again.&lt;br /&gt;If that doesn't work, please make sure that you have activated your account by clicking on the activation link in the sent mail.</value>
+  </data>
+  <data name="lt_verification" xml:space="preserve">
+    <value>Verification</value>
+  </data>
+  <data name="lt_activation" xml:space="preserve">
+    <value>Activation</value>
+  </data>
+  <data name="lt_activation_description_fail" xml:space="preserve">
+    <value>We apologize for the inconvenience, but an error has occurred during activation. It could be that the server is too busy at the moment, you have not registered for an account, or the website has encountered some internal error.&lt;br /&gt;Please register again or wait a few minutes then try again.</value>
+  </data>
+  <data name="lt_activation_description_success" xml:space="preserve">
+    <value>Your account has been successfully activated. Would you like to &lt;a href="login"&gt;login now&lt;/a&gt;?</value>
+  </data>
+  <data name="lt_verification_description" xml:space="preserve">
+    <value>Your email address needs to be validated for our services.&lt;br /&gt;An email has been sent to &lt;i&gt;{0}&lt;/i&gt;. Please click on the link provided in it to activate your account.</value>
+    <comment>{0} denotes an email address.</comment>
+  </data>
+  <data name="lt_account" xml:space="preserve">
+    <value>My Account</value>
+  </data>
+  <data name="lt_account_description" xml:space="preserve">
+    <value>Your account info is listed below:</value>
+  </data>
+  <data name="btn_editaccount" xml:space="preserve">
+    <value>Edit Account</value>
+  </data>
+  <data name="lt_sendmail" xml:space="preserve">
+    <value>If the verification mail has not been sent to you after 10 minutes, please click on the button below to resend it.</value>
+  </data>
+  <data name="btn_resendmail" xml:space="preserve">
+    <value>Resend Mail</value>
+  </data>
+  <data name="lb_logininfo" xml:space="preserve">
+    <value>You are logged in as {0}</value>
+    <comment>{0} denotes a display name</comment>
+  </data>
+  <data name="btn_cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="btn_confirm" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="lt_editaccount" xml:space="preserve">
+    <value>Edit Account</value>
+  </data>
+  <data name="lt_editaccount_description" xml:space="preserve">
+    <value>Note: Both your email address and display name should be unique per account.</value>
+  </data>
+  <data name="lt_coursecode" xml:space="preserve">
+    <value>Course Code</value>
+  </data>
+  <data name="lt_coursecode_description" xml:space="preserve">
+    <value>Sample course code: MATH122</value>
+  </data>
+  <data name="lt_isbn" xml:space="preserve">
+    <value>ISBN</value>
+  </data>
+  <data name="lt_isbn_description" xml:space="preserve">
+    <value>ISBN consists of 10 or 13 numeric characters with no dashes in-between. For more info, click &lt;a href="isbn"&gt;here&lt;/a&gt;.</value>
+  </data>
+  <data name="lt_sell" xml:space="preserve">
+    <value>Sell Textbooks</value>
+  </data>
+  <data name="lt_sell_description" xml:space="preserve">
+    <value>List your textbooks on UBCTextbooks for others to see.</value>
+  </data>
+  <data name="msg_isbnnotvalid" xml:space="preserve">
+    <value>Only 10 or 13 numeric characters are allowed.</value>
+  </data>
+  <data name="msg_numbernotvalid" xml:space="preserve">
+    <value>*Course number may only contain 2 ~ 4 numeric characters.</value>
+  </data>
+  <data name="btn_next" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="lt_isbn_details" xml:space="preserve">
+    <value>The International Standard Book Number (ISBN) is a unique commercial book identifier barcode.&lt;br /&gt;Each ISBN code identifies uniquely a book. ISBN have either 10 or 13 digits.&lt;br /&gt;All ISBN assigned after 1 Jan 2007 have 13 digits.&lt;br /&gt;Typically, the ISBN is printed on the back cover of the book.</value>
+  </data>
+  <data name="btn_no" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="btn_yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="lt_author" xml:space="preserve">
+    <value>Author(s)</value>
+  </data>
+  <data name="lt_binding" xml:space="preserve">
+    <value>Binding</value>
+  </data>
+  <data name="lt_confirmtb" xml:space="preserve">
+    <value>Confirm Textbook</value>
+  </data>
+  <data name="lt_confirmtb_description" xml:space="preserve">
+    <value>Does the following book match the one you want to list?</value>
+  </data>
+  <data name="lt_manufacturer" xml:space="preserve">
+    <value>Manufacturer</value>
+  </data>
+  <data name="lt_title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="msg_internalerrortb" xml:space="preserve">
+    <value>An internal has occurred. Please navigate to the previous page and resubmit your info.</value>
+  </data>
+  <data name="ddl_cdbrandnew" xml:space="preserve">
+    <value>Brand New</value>
+  </data>
+  <data name="ddl_cdexcellent" xml:space="preserve">
+    <value>Excellent</value>
+  </data>
+  <data name="ddl_cdfair" xml:space="preserve">
+    <value>Fair</value>
+  </data>
+  <data name="ddl_cdgood" xml:space="preserve">
+    <value>Good</value>
+  </data>
+  <data name="ddl_cdpoor" xml:space="preserve">
+    <value>Poor</value>
+  </data>
+  <data name="lt_condition" xml:space="preserve">
+    <value>Condition</value>
+  </data>
+  <data name="lt_area" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="lt_location" xml:space="preserve">
+    <value>Trade Location</value>
+  </data>
+  <data name="lt_location_description" xml:space="preserve">
+    <value>Please enter an intersection or an address for the location to show up on Google Map.&lt;br /&gt;(41st Ave &amp; Granville Street, for example)&lt;br /&gt;We strongly recommend you to preview your address on Google map to ensure that it is presentable.</value>
+  </data>
+  <data name="hp_previewmap" xml:space="preserve">
+    <value>map preview</value>
+  </data>
+  <data name="msg_mapinserterror" xml:space="preserve">
+    <value>Could not find </value>
+  </data>
+  <data name="lt_edition" xml:space="preserve">
+    <value>Edition</value>
+  </data>
+  <data name="lt_notes" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="lt_tenorthirteendigit" xml:space="preserve">
+    <value>10-Digit: {0}/13-Digit: {1}</value>
+    <comment>{0} denotes a 10-digit isbn, {1} denotes a 13-digit isbn</comment>
+  </data>
+  <data name="lt_na" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="lt_notes_description" xml:space="preserve">
+    <value>Put other info related to your textbook here.&lt;br /&gt;For example, you may wish to indicate whether or not it contains a CD and so on.&lt;br /&gt;However, do note that your notes will be truncated when they exceed 300 characters.</value>
+  </data>
+  <data name="lt_price" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="lt_refprice" xml:space="preserve">
+    <value>Reference price from Amazon.ca: ${0:F2}&lt;br /&gt;Money sign is not allowed for the above field.</value>
+    <comment>{0} denotes a price from amazon.</comment>
+  </data>
+  <data name="msg_pricenotvalid" xml:space="preserve">
+    <value>Your price is not in a valid format or too large.&lt;br /&gt;Sample price format: 79.99, 80.&lt;br /&gt;The price should not exceed 999 dollars.</value>
+  </data>
+  <data name="lt_authors" xml:space="preserve">
+    <value>Authors</value>
+  </data>
+  <data name="lt_numberofoffers" xml:space="preserve">
+    <value>Number of Offers</value>
+  </data>
+  <data name="lt_timeposted" xml:space="preserve">
+    <value>Time Posted</value>
+  </data>
+  <data name="btn_commentoroffer" xml:space="preserve">
+    <value>Comment/Offer</value>
+  </data>
+  <data name="lt_mylisting" xml:space="preserve">
+    <value>My Listing</value>
+  </data>
+  <data name="lt_mylisting_description" xml:space="preserve">
+    <value>Below lies the complete record of your listing.</value>
+  </data>
+  <data name="lt_author_description" xml:space="preserve">
+    <value>If there are more than one author, please delimit them with '/'.&lt;br /&gt;(ie. "John Kauffman/Kevin Spencer/Thearon Willis")</value>
+  </data>
+  <data name="btn_comment" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="btn_offer" xml:space="preserve">
+    <value>Offer</value>
+  </data>
+  <data name="lt_listdetails" xml:space="preserve">
+    <value>List Details</value>
+  </data>
+  <data name="lt_posterdisplayname" xml:space="preserve">
+    <value>Poster</value>
+  </data>
+  <data name="lt_timelisted" xml:space="preserve">
+    <value>Time Listed</value>
+  </data>
+  <data name="lt_refprices" xml:space="preserve">
+    <value>Reference Price(Amazon.ca)</value>
+  </data>
+  <data name="lt_comments" xml:space="preserve">
+    <value>Offer/Comment</value>
+  </data>
+  <data name="lt_offercomments" xml:space="preserve">
+    <value>Offer/Comment</value>
+  </data>
+  <data name="lt_reload" xml:space="preserve">
+    <value>You may need to reload the page for your comment or offer to show up. Please refrain from posting repeated comments.</value>
+  </data>
+  <data name="lt_userdetails" xml:space="preserve">
+    <value>User Details</value>
+  </data>
+  <data name="lt_search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+</root>

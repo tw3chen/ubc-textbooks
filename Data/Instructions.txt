@@ -1,0 +1,12 @@
+(1) Have CourseList.html ready 
+    (from http://w4.bookstore.ubc.ca/students/guide/sidemenu.html)
+(2) Run SaveCourseBookInfo.exe
+
+Result:
+CourseListInsertScript.txt
+BookDetailInsertScript.txt
+
+Execute  on your SQL server
+
+
+Voila

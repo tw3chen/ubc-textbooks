@@ -1,0 +1,30 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteTemplate.master.cs" Inherits="UBCTextbooks.SiteTemplate" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="head" runat="server">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="~/stylesheet/default.css" />
+</head>
+<body onload="if(document.getElementById('ctl00_Content_txt_date')) var popupcalendar = new Epoch('cal', 'popup', document.getElementById('ctl00_Content_txt_date'), false);">
+    <div id="main">
+        <form id="fm_main" runat="server">
+            <asp:Panel id="navigation" runat="server">
+                <div id="logininfo">
+                    <asp:Label id="lb_logininfo" CssClass="hidden" Text="" runat="server" />
+                </div>
+                <asp:HyperLink id="hp_buytextbooks" Text="" runat="server" NavigateUrl="~/" /> | 
+                <asp:HyperLink id="hp_selltextbooks" Text="" runat="server" NavigateUrl="~/sell" /> | 
+            </asp:Panel>
+        <div id="header"><a href="/"><asp:Image id="img_logo" ImageUrl="~/images/logo.gif" runat="server" /></a></div>
+        <hr />
+        <asp:ContentPlaceHolder id="Content" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        <div style="clear:both;">
+            <hr />
+        </div>
+        </form>
+    </div>
+</body>
+</html>
